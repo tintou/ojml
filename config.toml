@@ -1,0 +1,45 @@
+# The URL the site will be built for
+base_url = "https://ouijemelance.org"
+
+theme = "duckquill"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+minify_html = true
+generate_feeds = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+title = "Oui Je Me Lance !"
+description = "Entreprendre"
+
+# The default language; used in feeds.
+default_language = "fr"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[search]
+index_format = "elasticlunr_json"
+
+[extra]
+# Put all your custom variables here
+accent_color = "#ec5e3a"
+show_copy_button = true
+scripts = [
+    "lunr.stemmer.support.min.js",
+    "lunr.fr.min.js"
+]
+
+[extra.nav]
+show_feed = true
+links = [
+ 	{ url = "@/cooperative/_index.md", name = "La Coopérative" },
+ 	{ url = "@/rejoindre/_index.md", name = "Nous rejoindre" },
+ 	{ url = "@/blog/_index.md", name = "Actualités" },
+ 	{ url = "@/communaute/_index.md", name = "La communauté " },
+]
+
